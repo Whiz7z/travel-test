@@ -21,7 +21,6 @@ const TripInfo = () => {
 
   return (
     <div className={styles.tripInfoContainer}>
-
       <div className={styles.tripInfoTop}>
         <div className={styles.infoItem}>
           <p>Trip duration</p>
@@ -36,7 +35,11 @@ const TripInfo = () => {
           <p>7h 20m from SFO</p>
         </div>
 
-        <a href={"#"} className={styles.viewItineraryLink}>
+        <a
+          href={"#"}
+          style={{ color: "rgba(113, 78, 255, 1)" }}
+          className={styles.viewItineraryLink}
+        >
           View itinerary
         </a>
       </div>
@@ -45,11 +48,11 @@ const TripInfo = () => {
         <div className={styles.infoHeader}>
           <h1>{"Iceland's"} Highlights</h1>
           <div className={styles.actions}>
-            <button className={styles.wishListBtn}>
+            <button style={{ color: "#000000" }} className={styles.wishListBtn}>
               {" "}
               <WishListSvg /> Add to wishlish
             </button>
-            <button className={styles.share}>
+            <button style={{ color: "#000000" }} className={styles.share}>
               <ShareSvg /> Share
             </button>
           </div>
@@ -107,7 +110,9 @@ const TripInfo = () => {
                 min={1}
                 max={30}
                 value={persons}
-                onChange={(e) => { setPersons(e.target.value) }}
+                onChange={(e) => {
+                  setPersons(e.target.value);
+                }}
               />
             </div>
           </div>
