@@ -20,7 +20,7 @@ const Menu = () => {
       </ul>
 
       <div className={styles.createBtn}>
-        <button><PlusSvg/> Create</button>
+        <button style={{color: '#000000'}}><PlusSvg/> Create</button>
       </div>
     </div>
   );
