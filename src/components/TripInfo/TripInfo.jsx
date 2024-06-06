@@ -17,6 +17,16 @@ const TripInfo = () => {
     new Date("July 11, 2024")
   ]);
 
+  // const [isHovered, setIsHovered] = useState(false);
+
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
+
   const [persons, setPersons] = useState(2);
 
   return (
@@ -48,11 +58,16 @@ const TripInfo = () => {
         <div className={styles.infoHeader}>
           <h1>{"Iceland's"} Highlights</h1>
           <div className={styles.actions}>
-            <button style={{ color: "#000000" }} className={styles.wishListBtn}>
+            <button
+              // style={{ color: isHovered ? "#ffffff" : "#000000" }} 
+              className={styles.wishListBtn} 
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
+            >
               {" "}
               <WishListSvg /> Add to wishlish
             </button>
-            <button style={{ color: "#000000" }} className={styles.share}>
+            <button  className={styles.share}>
               <ShareSvg /> Share
             </button>
           </div>

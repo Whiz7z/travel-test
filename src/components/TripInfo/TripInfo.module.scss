@@ -102,9 +102,10 @@ input:-ms-input-placeholder {
         align-items: center;
         transition: 0.3s all;
         cursor: pointer;
+        
         &:hover {
           background-color: $active;
-          color: white;
+          color: #fff;
 
           svg {
             path {
@@ -116,6 +117,20 @@ input:-ms-input-placeholder {
       }
 
       .wishListBtn {
+      }
+
+      .share{
+        &:hover {
+          background-color: $active;
+          color: #fff;
+
+          svg {
+            path {
+              stroke: white;
+              fill: transparent;
+            }
+          }
+        }
       }
     }
   }
