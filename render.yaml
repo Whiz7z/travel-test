@@ -7,4 +7,4 @@ services:
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
-        value: 16.14.0  # Specify the Node.js version you want to use
+        value: 20.9.0  # Specify the Node.js version you want to use
