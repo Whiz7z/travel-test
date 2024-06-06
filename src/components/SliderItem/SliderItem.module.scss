@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.curatorsPick {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 13px;
+  color: $textSecondary;
+}
+
+.wishContainer {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.sliderItemContainer {
+  display: grid;
+
+  .imgContainer {
+    position: relative;
+    width: 216px;
+    height: 292px;
+    border-radius: 16px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    color: $textSecondary;
+  }
+}

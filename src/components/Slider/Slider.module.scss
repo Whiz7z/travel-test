@@ -1,0 +1,23 @@
+.sliderContainer{
+  width: 649px;
+  overflow: hidden;
+  position: relative;
+
+  .arrow{
+    position: absolute;
+    top: 120px;
+    z-index: 100;
+    
+    cursor: pointer;
+  }
+
+  .arrowRight{
+    
+    right: 12px;
+  }
+
+  .arrowLeft{
+    transform: rotateY(180deg);
+    left: 12px;
+  }
+}

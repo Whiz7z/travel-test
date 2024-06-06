@@ -1,10 +1,23 @@
-import React from "react";
+import React , {useState} from "react";
 import styles from "./TripInfo.module.scss";
-
+import DateRangePicker from "rsuite/DateRangePicker";
+import './DatePickerCustomStyles.scss';
+// (Optional) Import component styles. If you are using Less, import the `index.less` file.
+import "rsuite/DateRangePicker/styles/index.css";
+import format from "date-fns/format";
 import profileImg from "../../assets/profile/tania.png";
 import WishListSvg from "../../svg/WishListSvg";
 import ShareSvg from "../../svg/ShareSvg";
+import PlaneSvg from "../../svg/PlaneSvg";
+import DateSvg from "../../svg/DateSvg";
+import PersonSvg from "../../svg/PersonSvg";
 const TripInfo = () => {
+  const [date, setDate] = useState([
+    new Date("July 3, 2024"),
+    new Date("July 11, 2024")
+  ]);
+
+  const [persons, setPersons] = useState(2);
   return (
     <div className={styles.tripInfoContainer}>
       <div className={styles.tripInfoTop}>
@@ -61,7 +74,52 @@ const TripInfo = () => {
         </div>
       </div>
 
-      <div className={styles.itinerary}></div>
+      <div className={styles.itinerary}>
+        <h2>Iceland itinerary</h2>
+        <form action="">
+          <div className={styles.flightInputs}>
+            <input type="text" value={"Reykjavík, KEF"} />
+            <PlaneSvg />
+            <input type="text" value={"San Francisco, SFO"} />
+          </div>
+
+          <div className={styles.otherInputs}>
+            <div className={styles.dates}>
+              <DateSvg />
+              {/* <input type="date" /> */}
+              <DateRangePicker
+                editable={false}
+                defaultCalendarValue={date}
+                defaultValue={date}
+                // placeholder={
+                //   format(new Date("July 3, 2024"), "MMM dd") +
+                //   " - " +
+                //   format(new Date("July 11, 2024"), "MMM dd")
+                // }
+
+                //value={date[0] + " - " + date[1]}
+
+                renderValue={([start, end]) => {
+                  return (
+                    format(start, "MMM dd") + " - " + format(end, "MMM dd")
+                  );
+                }}
+              />
+            </div>
+
+            <div className={styles.persons}>
+              <PersonSvg />
+              <input
+                type="number"
+                min={1}
+                max={30}
+                value={persons}
+                onChange={(e) => { setPersons(e.target.value) }}
+              />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

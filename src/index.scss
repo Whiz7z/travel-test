@@ -65,6 +65,19 @@ body {
   color: $textMain;
 }
 
+/* Hide the arrows in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the arrows in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
 
 
 

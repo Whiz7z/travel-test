@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+.custom-date-range-picker .rs-picker-toggle .rs-picker-toggle-caret {
+  display: none;
+}
+
+/* Or change the icon */
+// .custom-date-range-picker .rs-picker-toggle .rs-picker-toggle-caret::before {
+//   content: '📅'; /* You can use any icon or character */
+//   font-size: 1.5em;
+// }
+
+.rs-input-group-addon{
+  display: none !important;
+}
+
+.rs-date-range-input .rs-input {
+  border-radius: 8px;
+  border: 1px solid $border;
+  color: $textSecondary !important;
+}
+
+.rs-input-group, .rs-input-group-inside {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+.rs-input-group.rs-input-group-inside {
+  background-color: transparent !important;
+}
