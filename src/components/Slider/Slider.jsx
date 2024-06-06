@@ -13,7 +13,7 @@ import NextBtn from "./NextBtn";
 import PrevBtn from "./PrevBtn";
 import '../Slider/SwiperCustom.css'
 
-const Slider = ({ items }) => {
+const Slider = ({ items , isHotel}) => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
@@ -52,7 +52,7 @@ const Slider = ({ items }) => {
 
           {items
             // .toSorted((a, b) => a.id + b.id)
-            .map((item, index) => (
+            .map((item) => (
               <SwiperSlide key={item.id}>
                 <SliderItem item={item} isHotel={isHotel} />
               </SwiperSlide>
@@ -138,6 +138,7 @@ const Slider = ({ items }) => {
 
 Slider.propTypes = {
   items: PropTypes.array,
+  isHotel: PropTypes.bool,
 };
 
 export default Slider;

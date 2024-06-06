@@ -7,6 +7,7 @@ import Slider from "../Slider/Slider";
 import PlanSvg from "../../svg/PlanSvg";
 import StarsSvg from "../../svg/StarsSvg";
 import Plan from "../Plan/Plan";
+import PropTypes from "prop-types";
 
 // import HighlightsSvg from '../../svg/HighlightsSvg';
 

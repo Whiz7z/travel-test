@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Regions.module.scss";
 import RegionItem from "../RegionItem/RegionItem";
 

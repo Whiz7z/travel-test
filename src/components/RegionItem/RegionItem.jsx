@@ -8,7 +8,7 @@ const RegionItem = ({highlights, hotels, info, plan}) => {
     <div className={styles.region}>
       <RegionInfo info={info} />
       <RegionHighlights  highlights={highlights} plan={plan} />
-      {/* <RegionHotels  hotels={hotels}/> */}
+      <RegionHotels  hotels={hotels}/>
     </div>
   )
 }

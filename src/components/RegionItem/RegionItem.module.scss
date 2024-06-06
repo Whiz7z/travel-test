@@ -119,25 +119,35 @@
     }
   }
 
-  .highlightsContainer{
-
+  .highlightsContainer {
   }
 }
-
 
 @media screen and (max-width: 420px) {
+  .highlightsContainer {
+    .content {
+      grid-column: 1/3;
 
-.highlightsContainer{
-  .content{
-    grid-column: 1/3;
-
-    .top{
-      display: grid;
-      row-gap: 8px;
+      .top {
+        display: grid;
+        row-gap: 8px;
+      }
+    }
+    .sideLineHighlights,
+    .sideIconHotels {
+      display: none;
     }
   }
-  .sideLineHighlights{
-    display: none;
+
+  .hotelsContainer {
+
+    .content {
+      grid-column: 1/3;
+        display: grid;
+        row-gap: 8px;
+    }
+    .sideIconHotels {
+      display: none;
+    }
   }
-}
 }
