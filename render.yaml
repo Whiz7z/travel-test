@@ -2,5 +2,9 @@ services:
   - type: web
     name: my-app
     env: node
-    buildCommand: npm install --force && npm run build
+    plan: free
+    buildCommand: npm install --legacy-peer-deps && npm run build
     startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 16.14.0  # Specify the Node.js version you want to use
