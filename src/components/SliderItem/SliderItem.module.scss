@@ -41,9 +41,34 @@
     margin-top: 8px;
   }
 
+  .rating{
+    display: flex;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    align-items: center;
+    margin: 2px  0;
+  }
+
   p {
     font-size: 15px;
     font-weight: 400;
     color: $textSecondary;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .sliderItemContainer{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .sliderItemContainer{
+    justify-content: center;
+    padding-bottom: 26px;
+    .imgContainer{
+    }
   }
 }

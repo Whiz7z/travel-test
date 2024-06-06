@@ -18,8 +18,10 @@ const TripInfo = () => {
   ]);
 
   const [persons, setPersons] = useState(2);
+
   return (
     <div className={styles.tripInfoContainer}>
+
       <div className={styles.tripInfoTop}>
         <div className={styles.infoItem}>
           <p>Trip duration</p>
@@ -86,19 +88,10 @@ const TripInfo = () => {
           <div className={styles.otherInputs}>
             <div className={styles.dates}>
               <DateSvg />
-              {/* <input type="date" /> */}
               <DateRangePicker
                 editable={false}
                 defaultCalendarValue={date}
                 defaultValue={date}
-                // placeholder={
-                //   format(new Date("July 3, 2024"), "MMM dd") +
-                //   " - " +
-                //   format(new Date("July 11, 2024"), "MMM dd")
-                // }
-
-                //value={date[0] + " - " + date[1]}
-
                 renderValue={([start, end]) => {
                   return (
                     format(start, "MMM dd") + " - " + format(end, "MMM dd")

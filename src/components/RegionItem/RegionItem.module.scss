@@ -75,6 +75,10 @@
           color: white;
 
           svg {
+            path {
+              stroke: white;
+              fill: white;
+            }
             rect {
               fill: white;
               stroke: white;
@@ -88,4 +92,52 @@
   .highlights {
     margin-bottom: 16px;
   }
+}
+
+.hotelsContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  width: 100%;
+
+  .content {
+    display: grid;
+    margin-top: 15px;
+
+    .highlightsTitle {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regionInfoContainer {
+    .regionInfo {
+      .description {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .highlightsContainer{
+
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+
+.highlightsContainer{
+  .content{
+    grid-column: 1/3;
+
+    .top{
+      display: grid;
+      row-gap: 8px;
+    }
+  }
+  .sideLineHighlights{
+    display: none;
+  }
+}
 }

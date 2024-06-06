@@ -9,21 +9,35 @@
 //   font-size: 1.5em;
 // }
 
-.rs-input-group-addon{
+.rs-input-group-addon {
   display: none !important;
+}
+
+.rs-input {
+  &:focus {
+    outline: 1px solid $blueBorder !important;
+  }
 }
 
 .rs-date-range-input .rs-input {
   border-radius: 8px;
   border: 1px solid $border;
   color: $textSecondary !important;
+  outline: none !important;
+
+  &:focus {
+    border: 1px solid $blueBorder !important;
+  }
 }
 
-.rs-input-group, .rs-input-group-inside {
+.rs-input-group,
+.rs-input-group-inside {
   border-radius: 0 !important;
   border: none !important;
+  outline: none !important;
 }
 
 .rs-input-group.rs-input-group-inside {
   background-color: transparent !important;
+  outline: none !important;
 }

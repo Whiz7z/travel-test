@@ -1,0 +1,139 @@
+@import "../../styles/variables";
+
+.plansContainer {
+  display: grid;
+  row-gap: 32px;
+  .plan {
+    .planDayTop {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      h3 {
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        .time {
+          display: flex;
+          min-width: 73px;
+          height: 28px;
+          border-radius: 24px;
+          font-size: 13px;
+          font-weight: 500;
+          color: $textSecondary;
+          align-items: center;
+          justify-content: center;
+          gap: 4;
+          padding: 0 10px 0 6px;
+          background-color: rgba(242, 242, 247, 1);
+        }
+      }
+    }
+
+    .planItems {
+      display: grid;
+      row-gap: 24px;
+    }
+  }
+}
+
+.planItemContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  .imgContainer {
+    width: 96px;
+    height: 132px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .planInfro {
+    display: grid;
+    align-content: center;
+
+    row-gap: 8px;
+    h4 {
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .curator {
+      width: 112px;
+      height: 32px;
+      border-radius: 8px;
+      background-color: rgba(242, 242, 247, 1);
+      font-size: 13px;
+      font-weight: 500;
+      color: $textSecondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: $textSecondary;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-self: center;
+    justify-self: end;
+    align-content: center;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .planItemContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .plansContainer{
+    .plan{
+      .planDayTop {
+        margin-bottom: 22px;
+      }
+    }
+  }
+  .planItemContainer {
+    grid-template-columns: 2fr 3fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .planItemContainer {
+    grid-template-columns: 1fr;
+    justify-self: center;
+    width: 220px;
+    .imgContainer {
+      grid-row: 2/3;
+      height: 292px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .planInfro {
+      grid-row: 3/4;
+
+    }
+    .action {
+      grid-row: 1/3;
+
+    }
+  }
+}

@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./RegionItem.module.scss";
 import InfoLineSvg from "../../svg/InfoLineSvg";
 import PropTypes from "prop-types";
-const DEFAULTTAGS = ["Geysers", "Waterfalls", "Crater lakes"];
 
-const RegionInfo = ({ title, tags, desc }) => {
+const RegionInfo = ({info}) => {
+  const { title, tags, description } = info || {};
   return (
     <div className={styles.regionInfoContainer}>
       <div className={styles.sideLine}>
@@ -12,16 +12,11 @@ const RegionInfo = ({ title, tags, desc }) => {
       </div>
 
       <div className={styles.regionInfo}>
-        <h3>{title || "Golden Circle Region"}</h3>
+        <h3>{title}</h3>
         <div className={styles.tags}>
-          {tags
-            ? tags.map((tag) => <span key={tag}>{tag}</span>)
-            : DEFAULTTAGS.map((tag) => <span key={tag}>{tag}</span>)}
+          {tags && tags.map((tag) => <span key={tag}>{tag}</span>)}
         </div>
-        <p className={styles.description}>
-          {desc ||
-            "The Golden Circle in Iceland is a renowned tourist route that encompasses an array of stunning natural landmarks within a relatively short distance from Reykjavík. This scenic loop includes three primary attractions: Þingvellir National Park, where you can explore the rift valley created by the diverging North American and Eurasian tectonic plates and witness the site of Iceland's ancient parliament."}
-        </p>
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   );
@@ -30,8 +25,7 @@ const RegionInfo = ({ title, tags, desc }) => {
 //prop validation
 
 RegionInfo.propTypes = {
-  title: PropTypes.string,
-  tags: PropTypes.array,
+  info: PropTypes.object,
 };
 
 export default RegionInfo;

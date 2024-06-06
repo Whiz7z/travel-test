@@ -1,9 +1,8 @@
 @import "../../styles/variables";
 
-
 input::placeholder {
-   color: $textSecondary; /* Firefox reduces the opacity by default */
-   opacity: 1;
+  color: $textSecondary; /* Firefox reduces the opacity by default */
+  opacity: 1;
 }
 
 /* For webkit browsers (Chrome, Safari, Opera) */
@@ -13,19 +12,19 @@ input::-webkit-input-placeholder {
 
 /* For Mozilla Firefox 19+ */
 input::-moz-placeholder {
-   color: $textSecondary;
+  color: $textSecondary;
   opacity: 1; /* Override Firefox default opacity */
 }
 
 /* For Mozilla Firefox 4 to 18 */
 input:-moz-placeholder {
-   color: $textSecondary;
+  color: $textSecondary;
   opacity: 1;
 }
 
 /* For Internet Explorer 10-11 */
 input:-ms-input-placeholder {
-   color: $textSecondary;
+  color: $textSecondary;
 }
 
 .tripInfoContainer {
@@ -75,7 +74,7 @@ input:-ms-input-placeholder {
 
 .tripInfoMain {
   display: grid;
-margin-bottom: 56px;
+  margin-bottom: 56px;
   .infoHeader {
     display: flex;
     justify-content: space-between;
@@ -172,7 +171,6 @@ margin-bottom: 56px;
   h2 {
     font-size: 22px;
     font-weight: 600;
-
   }
 
   form {
@@ -200,6 +198,9 @@ margin-bottom: 56px;
         font-size: 15px;
         font-weight: 400;
         padding: 9.5px 0 9.5px 16px;
+        &:focus {
+          outline: 1px solid $blueBorder !important;
+        }
       }
     }
 
@@ -223,6 +224,10 @@ margin-bottom: 56px;
           border-radius: 8px;
           background-color: white !important;
           color: $textSecondary !important;
+          outline: none;
+          &:focus {
+            outline: 1px solid $blueBorder !important;
+          }
         }
       }
 
@@ -244,6 +249,115 @@ margin-bottom: 56px;
           color: $textSecondary;
           font-size: 15px;
           font-weight: 400;
+
+          outline: none;
+          &:focus {
+            outline: 1px solid $blueBorder !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tripInfoTop {
+    display: grid;
+    width: 360px;
+    justify-self: center;
+    grid-template-columns: 1fr auto;
+    height: 100%;
+    column-gap: 16px;
+    justify-content: center;
+    justify-items: start;
+
+    .viewItineraryLink {
+      justify-self: start;
+    }
+  }
+
+  .itinerary {
+    form {
+      justify-self: center;
+      grid-template-columns: 1fr;
+      width: 480px;
+      row-gap: 20px;
+
+      .otherInputs {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .tripInfoContainer {
+    row-gap: 32px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .tripInfoMain {
+    margin-bottom: 0;
+    .infoHeader {
+      display: grid;
+      align-items: start;
+      row-gap: 8px;
+      h1 {
+      }
+    }
+  }
+
+  .itinerary {
+    form {
+      width: 100%;
+
+      .flightInputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+
+        svg {
+          justify-self: center;
+          transform: rotateZ(90deg);
+        }
+        input {
+          width: 100%;
+        }
+      }
+
+      .otherInputs {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .tripInfoTop {
+    display: grid;
+    width: 258px;
+    
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .itinerary {
+    form {
+
+      .flightInputs {
+
+        svg {
+        }
+        input {
+        }
+      }
+
+      .otherInputs {
+        display: grid;
+
+        .dates{
+          input{
+            width: 100%;
+          }
         }
       }
     }
