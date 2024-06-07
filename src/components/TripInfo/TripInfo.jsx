@@ -46,7 +46,7 @@ const TripInfo = () => {
         </div>
 
         <a
-          href={"#"}
+          href={"#region"}
           style={{ color: "rgba(113, 78, 255, 1)" }}
           className={styles.viewItineraryLink}
         >

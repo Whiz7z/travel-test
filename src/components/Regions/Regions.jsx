@@ -20,6 +20,7 @@ const Regions = () => {
         hotels={goldenCircleHotels}
         info={golderCircleInfo}
         plan={goldenCirclePlan}
+        id={"region"}
       />
       <RegionItem
         highlights={southHighlandsighlights}
