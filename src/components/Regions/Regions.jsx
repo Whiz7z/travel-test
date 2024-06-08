@@ -27,6 +27,7 @@ const Regions = () => {
         hotels={southHighlandsHotels}
         info={southHighlandsInfo}
         plan={southHighlandsPlan}
+        isB={true}
       />
     </div>
   );

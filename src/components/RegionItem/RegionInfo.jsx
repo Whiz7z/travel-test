@@ -2,13 +2,14 @@ import React from "react";
 import styles from "./RegionItem.module.scss";
 import InfoLineSvg from "../../svg/InfoLineSvg";
 import PropTypes from "prop-types";
+import BDotSvg from "../../svg/BDotSvg";
 
-const RegionInfo = ({info}) => {
+const RegionInfo = ({info, isB}) => {
   const { title, tags, description } = info || {};
   return (
     <div className={styles.regionInfoContainer}>
       <div className={styles.sideLine}>
-        <InfoLineSvg />
+        {isB ? <BDotSvg /> : <InfoLineSvg />}
       </div>
 
       <div className={styles.regionInfo}>
@@ -26,6 +27,7 @@ const RegionInfo = ({info}) => {
 
 RegionInfo.propTypes = {
   info: PropTypes.object,
+  isB: PropTypes.bool,
 };
 
 export default RegionInfo;
