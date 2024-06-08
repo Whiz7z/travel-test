@@ -57,12 +57,30 @@
       gap: 0.5rem;
       background-color: $white;
       border-radius: 8px;
-      padding: 8px;
+      
       position: absolute;
       z-index: 1100;
       bottom: -180px;
       border: 1px solid $border;
       width: 100%;
+      overflow: hidden;
+
+      //div first child and last child padding8
+      div:first-child{
+        padding-top: 4px;
+      } 
+
+      div:last-child{
+        padding-bottom: 4px;
+      }
+
+      div{
+        padding: 0 8px;
+        transition: 0.3s all;
+        &:hover{
+          background-color: $blueBorder;
+        }
+      }
     }
   }
 
