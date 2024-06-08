@@ -21,7 +21,6 @@
     border-radius: 16px;
     border: 1px solid $border;
     padding: 0 6px 0 16px;
-
     li {
       font-size: 15px;
       font-weight: 500;
@@ -49,6 +48,21 @@
       gap: 1.5rem;
       align-items: center;
       cursor: pointer;
+      position: relative;
+      
+    }
+    .dropdownContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background-color: $white;
+      border-radius: 8px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1100;
+      bottom: -180px;
+      border: 1px solid $border;
+      width: 100%;
     }
   }
 
@@ -196,7 +210,7 @@
         font-size: 14px;
         font-weight: 400;
 
-        a{
+        a {
           font-size: 14px;
           font-weight: 400;
         }
