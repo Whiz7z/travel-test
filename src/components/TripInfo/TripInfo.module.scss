@@ -75,6 +75,10 @@ input:-ms-input-placeholder {
 .tripInfoMain {
   display: grid;
   margin-bottom: 56px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 26px;
+  }
   .infoHeader {
     display: flex;
     justify-content: space-between;

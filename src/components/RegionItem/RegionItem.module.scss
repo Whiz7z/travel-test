@@ -1,5 +1,21 @@
 @import "../../styles/variables";
 
+.region {
+  .regionLineContainer {
+    padding-bottom: 15px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 13px;
+      width: 2px;
+      height: 100%;
+      background-color: #3c3c432e;
+    }
+  }
+}
+
 .regionInfoContainer {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -7,6 +23,7 @@
 
   .sideLine {
     // height: 500px;
+    z-index: 10;
   }
 
   .regionInfo {
@@ -39,7 +56,10 @@
   grid-template-columns: auto 1fr;
   column-gap: 20px;
   width: 100%;
-
+  .sideLineHighlights {
+    z-index: 10;
+    margin-top: 15px;
+  }
   .content {
     display: grid;
     margin-top: 15px;
@@ -100,9 +120,11 @@
   column-gap: 20px;
   width: 100%;
 
+  .sideIconHotels{
+  }
+
   .content {
     display: grid;
-    margin-top: 15px;
 
     .highlightsTitle {
       margin-bottom: 24px;
@@ -125,29 +147,33 @@
 
 @media screen and (max-width: 420px) {
   .highlightsContainer {
+    display: flex;
     .content {
       grid-column: 1/3;
-
+      width: 100%;
       .top {
         display: grid;
         row-gap: 8px;
       }
+      
     }
-    .sideLineHighlights,
-    .sideIconHotels {
-      display: none;
-    }
+    // .sideLineHighlights,
+    // .sideIconHotels {
+    //   display: none;
+    // }
   }
 
   .hotelsContainer {
-
+    display: flex;
     .content {
       grid-column: 1/3;
-        display: grid;
-        row-gap: 8px;
+      display: grid;
+      row-gap: 8px;
+      width: 100%;
+      
     }
-    .sideIconHotels {
-      display: none;
-    }
+    // .sideIconHotels {
+    //   display: none;
+    // }
   }
 }
